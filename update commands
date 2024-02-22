@@ -1,9 +1,9 @@
-Docker versiyonu için upgrade komutları
+<h1 align="center">Docker versiyonu için upgrade komutları</h1>
+
 
 Varsa önce konfigürasyon değişikliklerini yapın 
 conf.yaml 
-
-
+#
 Upgrade komutları
 ```console
 # Sunucuda yeni versiyon varsa günceller
