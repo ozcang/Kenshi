@@ -1,18 +1,32 @@
-v.10.9 template
+v.11.8 template
 
 log: info
-lite: true
 name: <name>
+
 rpc:
-  ethereum:
+  ethereum: 
     - https://ethereum.publicnode.com
     - https://eth.llamarpc.com
     - wss://ethereum.publicnode.com
     - https://eth.rpc.blxrbdn.com
-peers:
-  max: 128
-  parallel: 8
-jail:
-  duration: 5
-  strikes: 5
-waves: 8
+
+plugins:
+  uniswap:
+    tokens:
+      - name: ethereum
+        pair: "0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640"
+        delta: 6
+        invert: true
+        unit: USDT
+
+      - name: arbitrum
+        pair: "0x59354356Ec5d56306791873f567d61EBf11dfbD5"
+        delta: 0
+        invert: false
+        unit: ETH
+
+      - name: bitcoin
+        pair: "0x9db9e0e53058c89e5b94e29621a205198648425b"
+        delta: 2
+        invert: false
+        unit: USDT
