@@ -3,6 +3,11 @@ Docker versiyonu için upgrade komutları
 Varsa önce konfigürasyon değişikliklerini yapın 
 conf.yaml 
 
+
 Upgrade komutları
+```console
+# Sunucuda yeni versiyon varsa günceller
 ./unchained.sh worker pull
+# Güncelleme yaptıktan sonra instance yeniden başlatılır
 ./unchained.sh worker up -d
+```
