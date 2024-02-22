@@ -1,0 +1,8 @@
+Docker versiyonu için upgrade komutları
+
+Varsa önce konfigürasyon değişikliklerini yapın 
+conf.yaml 
+
+Upgrade komutları
+./unchained.sh worker pull
+./unchained.sh worker up -d
