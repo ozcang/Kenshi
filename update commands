@@ -1,5 +1,14 @@
 Docker versiyonu için upgrade komutları
 
+# Büyük upgrade varsa önce eski versiyonun key yedeklerini alıp siliyoruz
+# Worker'ı durduralım. Lütfen sayımın bitmesini (yani workerın durmasını) bekleyin 
+./unchained.sh worker stop
+#Sonra son versiyonu wget ile indiriyoruz
+wget https://github.com/KenshiTech/unchained/releases/download/v0.11.9/unchained-v0.11.9-docker.zip
+#Son versiyonu unzipliyoruz 
+unzip unchained-v0.11.9-docker.zip
+
+
 Varsa önce konfigürasyon değişikliklerini yapın 
 conf.yaml 
 
@@ -9,4 +18,7 @@ Upgrade komutları
 ./unchained.sh worker pull
 # Güncelleme yaptıktan sonra instance yeniden başlatılır
 ./unchained.sh worker up -d
+
+#Logları bununla kontrol ediyoruz
+./unchained.sh worker logs -f 
 
