@@ -22,3 +22,16 @@ Upgrade komutları
 #Logları bununla kontrol ediyoruz
 ./unchained.sh worker logs -f 
 
+
+#Docker hatası alıyorsanız
+#Error response from daemon: Conflict. The container name "/unchained_worker" is already in us
+#Önce kontrol ediyoruz
+docker ps -a
+
+#sonra docker dan siliyoruz
+#yöntem1: 
+docker rm unchained_worker
+#yöntem2:
+docker rm -f unchained_worker
+
+
